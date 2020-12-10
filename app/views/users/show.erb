@@ -1,0 +1,19 @@
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<%= @user.name %>
+<p>Mood <%= @user.mood %></p>
+<%= @user.happiness %>
+<%= @user.nausea %>
+Tickets: <%= @user.tickets %>
+<%= @user.height %>
+
+<% if  @user.admin == true %>
+ADMIN
+<% end %>
+
+<%= link_to 'Log Out', logout_path%>  
+<%= link_to 'See attractions', attractions_path %>

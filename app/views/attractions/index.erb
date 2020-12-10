@@ -1,0 +1,16 @@
+<% @attractions.each do |a|%>
+<%= link_to "Go on #{a.name}", attraction_path(a.id) %>
+<%= a.tickets %>
+<br>
+<% end %>
+
+<% if @user.admin == true%>
+<%= link_to "New Attraction", new_attraction_path %>
+<% @attractions.each do |a|%>
+<%= link_to "Show #{a.name}", attraction_path(a.id) %>
+<%= a.tickets %>
+<br>
+<% end %>
+
+<% end %>
+

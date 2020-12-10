@@ -1,0 +1,9 @@
+<h1>Sign In</h1>
+<%= form_tag '/signin', method: 'post' %>
+<%= label_tag "Your name:" %>
+<%= collection_select :user, :name, User.all, :id, :name, prompt: "Please select your username from this dropdown" %>
+<%= label_tag "Your Password:" %>
+<%= password_field_tag :user_password %>
+<%= submit_tag "Sign In" %>
+
+
